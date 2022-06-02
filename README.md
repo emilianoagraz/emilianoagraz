@@ -1,6 +1,6 @@
 # Soledad Compartida
 
-Normalmente escribo de noche, como si el silencio despertara mi voz interior. Para que despojado del ruido, pueda sumergirme en mi soledad, y volverla mi compañía.
+Normalmente escribo de noche, como si el silencio despertara mi voz interior. Para que despojado del ruido, pueda sumergirme en la soledad, y volverla mi compañía.
 
 No sé si te pasa como a mí, que de repente me vuelvo tan consciente de mi soledad, que parece que me parto en más de dos. 
 
