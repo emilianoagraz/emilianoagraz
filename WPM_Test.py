@@ -1,5 +1,6 @@
 import curses
 from curses import wrapper
+from curses.textpad import Textbox, rectangle
 import time
 
 def main(stdscr):
@@ -13,25 +14,18 @@ def main(stdscr):
     BLACK_AND_YELLOW = curses.color_pair(2)
     WHITE_AND_YELLOW = curses.color_pair(2)
 
-    # Screen
-    stdscr.addstr("Hello World")
+    win = curses.newwin(10, 60, 3, 8)
+    box = Textbox(win)
+
+    rectangle(stdscr, 1, 4, 14, 71)
+
     stdscr.refresh()
 
-    # Window
-    counter_win = curses.newwin(1, 20, 10, 10)
-
-    for i in range(100):
-        counter_win.clear()
-        color = BLACK_AND_WHITE
-
-        if i % 2 == 0:
-            color = BLACK_AND_YELLOW
-
-        counter_win.addstr(f"Count: {i}", color)    
-        counter_win.refresh()
-        time.sleep(0.1)
+    # gather & print
+    box.edit()
+    text = box.gather().strip().replace("\n", "")
+    stdscr.addstr(10, 40, text)
 
     stdscr.getch()
-
 
 wrapper(main)
