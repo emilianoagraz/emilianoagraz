@@ -13,9 +13,10 @@ def start_screen(stdscr):
     stdscr.refresh()
     stdscr.getkey()
 
+# DISPLAY
 def display_text(stdscr, target, current, wpm=0):
     stdscr.addstr(target)
-    stdscr.addstr(2, 2, f"WPM: {wpm}")
+    stdscr.addstr(10, 2, f"WPM: {wpm}")
 
     for i, char in enumerate(current):
         correct_char = target[i]
@@ -24,12 +25,14 @@ def display_text(stdscr, target, current, wpm=0):
             color = curses.color_pair(2)
 
         stdscr.addstr(0, i, char, color)
-
+        
+# LOAD FRASES
 def load_text():
     with open("text.txt", "r") as f:
         lines = f.readlines()
         return random.choice(lines).strip()
 
+# TEST
 def wpm_test(stdscr):
     target_text = load_text()
     current_text = []
@@ -65,7 +68,7 @@ def wpm_test(stdscr):
 
         
 
-
+# MAIN
 def main(stdscr):
 
     # COLOR
