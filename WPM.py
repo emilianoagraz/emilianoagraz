@@ -7,8 +7,8 @@ import random
 # START SCREEN
 def start_screen(stdscr):
     stdscr.clear()
-    stdscr.addstr(1, 2, "PROGRAMA DE ENTRENAMIENTO PARA ESCRITORES RÁPIDOS", curses.color_pair(3))
-    stdscr.addstr(2, 20, "de BAN BAN")
+    stdscr.addstr(1, 2, "PROGRAMA DE ENTRENAMIENTO PARA ESCRITORES DESASOSEGADOS", curses.color_pair(3))
+    stdscr.addstr(2, 22, "de BAN BAN")
     stdscr.addstr(4, 9, "Pulse cualquier tecla para empezar")
     stdscr.refresh()
     stdscr.getkey()
